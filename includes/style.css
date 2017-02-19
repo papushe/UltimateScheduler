@@ -1,0 +1,562 @@
+/*general*/
+*{
+    margin: 0;
+    padding: 0;
+}
+header, nav, main, footer, aside, section, article{
+    display:block;
+}
+body{
+    background: #eeeeee;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+h1 {
+	font-size: 24px;
+}
+#welcomeUser{
+    vertical-align: -webkit-baseline-middle;
+}
+header {
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    transition: height 500ms;
+    background: #eeeeee;
+}
+header.tiny {
+    height: 47px;
+}
+header img{
+    margin-left: 20px;
+    width: 55px;
+    transition: width 500ms;
+}
+header img.tiny{
+    width: 45px;
+}
+.notify{
+    margin-right: 130px;
+}
+.msg{
+    margin-right: 100px;
+}
+header > div{
+    margin-top: 20px;
+    margin-right: 20px;
+    transition: height 500ms;
+}
+header > div.tiny {
+    margin-top: 0;
+}
+a#logo {
+    font-family: 'Lobster', cursive;
+    font-size: 60px;
+    color: #005580;
+    float: left;
+    margin-left: 10px;
+    transition: font-size 500ms;
+}
+a#logo.tiny {
+    font-size: 32px;
+}
+a:hover {
+    text-decoration: none;
+}
+header span {
+    margin-left: 20px;
+    margin-top: 20px;
+    font-size: 2em;
+    color: #555555;
+    transition: font-size 500ms, float 500ms;
+}
+header span.tiny {
+    margin-left: 20px;
+    font-size: 1.6em;
+}
+nav {
+    position: fixed;
+    float: left;
+    width: 19%;
+    margin: 12% 0 0 20px;
+}
+nav > ul {
+    list-style-type: none;
+}
+.btn {
+	float: right;
+	background: #2f96b4;
+	color: #FFFFFF;
+	font-size: 12px;
+    text-shadow: none;
+    font-weight:100 ;
+}
+button.btn.btn-md.start {
+	padding: 4px 20px;
+}
+button.btn.btn-md.change {
+	padding: 4px 12px;
+}
+button.btn.btn-md.publish {
+	padding: 4px 13px;
+}
+p {
+	display: inline;
+}	
+footer {
+	bottom: 0;
+	margin-left: 8px;
+	margin-bottom: 10px;
+	position: fixed;
+}
+footer > p {
+	font-size: 10px;
+}
+.dropdown {
+	float: right;
+    position: inherit;
+}
+
+.panel-default > .panel-heading {
+	color: #777777;
+	font-size: 16px;
+	font-weight: bold;
+}
+.glyphicon-share {
+	font-size: 1.4em;
+	color: #555555;
+}
+.weekly table td, th {
+	text-align: center;
+	color: #555555;
+	font-weight: normal;
+}
+.manager .panel-body {
+	padding: 0;
+	height: 123px;
+	color: #555555;
+	font-weight: normal;
+}
+.dropdown-menu > li > a {
+	padding: 3px;
+}
+small {
+	font-size: 8px;
+	float: left
+}
+.dropdown li a { /*under the bell*/
+	border-bottom: 1px solid #eeeeee;
+	height: 40px;
+}
+.dropdown-menu {
+	padding: 2px;
+	border-radius: 4px;
+    top: inherit;
+}
+.newLi {
+	border-bottom: 1px solid #eeeeee;
+	height: 40px;
+	background: #D3D3D3;
+}
+.glyphicon-pencil {
+    float: right;
+    display: none;
+    margin-top: 4px;
+}
+.clear {
+    clear: both;
+}
+.glyphicon {
+    cursor: pointer;
+    position: inherit;
+}
+ .buttonBadge {
+	background-color: #fa3e3e;
+	border-radius: 20px;
+	color: #FFFFFF;
+	padding: 1px 5px;
+	font-size: 10px;
+	position: absolute;
+	top: 10px;
+	visibility: hidden;
+}
+.buttonBadge.tiny {
+    background-color: #fa3e3e;
+    border-radius: 20px;
+    color: #FFFFFF;
+    padding: 0 5px;
+    font-size: 10px;
+    position: absolute;
+    top: -8px;
+    right: 0;
+    visibility: hidden;
+}
+/*dashboard page*/
+.dashboard li:nth-child(1) p, .dashboard .glyphicon-calendar {
+	color: #2f96b4;
+}
+.dashboard .weekly .panel-body {
+	padding: 0;
+	height: 175px;
+}
+/* login page */
+.login {
+    background: url("../images/background.jpg") no-repeat;
+    background-size: cover;
+}
+.login header{
+    position: relative;
+    height: inherit;
+}
+.login a#logo {
+    color: #FFFFFF;
+    font-family: 'Lobster', cursive;
+    font-size: 60px;
+    float: left;
+    padding-left: 10px;
+    transition: font-size 500ms;
+}
+.login main {
+    width: 25%;
+    height: 209px;
+    float: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.description{
+    float: none;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    clear: both;
+}
+.login h1, .login h3{
+    text-align: center;
+}
+.login main > p {
+    position: absolute;
+    display: block;
+    margin: 0 auto;
+    color: #555555;
+    left: 18%;
+}
+.login main > p a {
+    color: #555555;
+    font-weight: bold;
+}
+.login .panel-heading p {
+    color: #555555;
+    font-size: 16px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+.input-group > span {
+    padding: 0 12px;
+}
+.input-group {
+    width: 214px;
+    height: 34px;
+    margin: 0 auto 7px auto;
+}
+form p:nth-child(4) {
+    display: inline-block;
+    margin-top: 8px;
+    margin-bottom: 0;
+}
+.login form .btn {
+    margin-top: 5px;
+    font-weight: normal;
+    color: #ffffff;
+}
+.login form .btn a {
+    color: #ffffff;
+}
+.login footer p {
+    display: none;
+}
+/* create account page */
+.createAccount main {
+	width: 40%;
+	margin-top: 200px;
+}
+.createAccount .input-group {
+	width: 100%;
+	height: 100%;
+}
+.createAccount form .input-group:nth-child(2) {
+	float: left;
+	width: 49%;
+}
+.createAccount form .input-group:nth-child(3) {
+	float: right;
+	width: 49%;
+}
+.createAccount form .input-group:nth-child(5) {
+	margin-top: 15px;
+}
+ /*constrains page*/
+.glyphicon-ok-sign {
+	top: 5px;
+	margin-left: 5px;
+	font-size: 1.3em;
+	color: #468847;
+}
+.glyphicon-question-sign {
+	top: 5px;
+	margin-left: 5px;
+	font-size: 1.3em;
+}
+.constrains .weekly .panel-body {
+	padding: 0;
+	height: 188px;
+}
+.constrains li:nth-child(3) p, .constrains .glyphicon-list-alt {
+	color: #2f96b4;
+}
+.constrains .approve {
+	margin: -3px -8px 0 4px;
+}
+.constrains .decline {
+	background: #cccccc;
+	margin: -3px 4px 0 4px;
+}
+.glyphicon-ban-circle {
+	color: #ff0000;
+	font-size: 1.5em;
+}
+.glyphicon-ok-circle {
+	color: #008000;
+	font-size: 1.5em;
+}
+.table > tbody > tr > td {
+	padding: 6px;
+}
+textarea {
+	resize: none;
+	padding: 10px;
+}
+textarea::-webkit-input-placeholder {
+	color: #999;
+}
+.alert {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	width: 30%;
+	z-index: 9999;
+	border-radius: 0;
+	display: none;
+}
+.progress {
+	float: right;
+	width: 35%;
+	display: inline-block;
+	margin: 6px 40px 0 auto;
+	visibility: hidden;
+}
+
+/*configuration page*/
+.configuration li:last-child p, .configuration .glyphicon-cog {
+	color: #2f96b4;
+}
+.configuration section {
+	margin-top: 30px;
+}
+.configuration form {
+	float: left;
+	width:70%;
+}	
+.configuration form div {
+	width: 90%;
+}
+.configuration .reset {
+	background: #cccccc;
+	margin-right: 3px;
+}
+.configuration .glyphicon-plus {
+	font-size: 150%;
+}
+#dropdownMenu1 {
+	background: transparent;
+	border: none;
+	font-size: 0.9em;
+	padding: 0;
+	margin-top: 0;
+	margin-right: 0;
+}
+#dropdownMenu1 > span {
+	font-size: 1.5em;
+	color: #555555;
+}
+#dropdownMenu1:hover {
+	background: none;
+}
+.weekly .panel-body {
+	padding: 0;
+	height: 175px;
+}
+#trigger{
+	float: left;
+	width: 40%
+}
+/*usersManagement*/
+.usersManagement  li:nth-child(2) p, .usersManagement .glyphicon-user {
+	color: #2f96b4;
+}
+/*workingtime*/
+.workingTime  li:nth-child(4) p, .workingTime .glyphicon-time {
+	color: #2f96b4;
+}
+/*performance*/
+.performance  li:nth-child(5) p, .performance .glyphicon-signal {
+	color: #2f96b4;
+}
+/*start of desktop mode*/
+@media(min-width:1344px) {
+    .glyphicon-calendar{
+        pointer-events: none;
+    }
+    .glyphicon-user{
+        pointer-events: none;
+    }
+    .glyphicon-list-alt{
+        pointer-events: none;
+    }
+    .glyphicon-time{
+        pointer-events: none;
+    }
+    .glyphicon-signal{
+        pointer-events: none;
+    }
+    .glyphicon-cog{
+        pointer-events: none;
+    }
+    .container {
+	width: 100%;
+	padding: 0;
+}
+    nav > ul > li {
+        margin-bottom: 10%;
+    }
+    nav > a{
+        font-size: 14px;
+        color: #555555;
+    }
+    nav > ul > li > a > span {
+        font-size: 2em;
+        color: #555555;
+    }
+    nav p{
+        font-size: 14px;
+        color: #555555;
+    }
+    main {
+        width: 81%;
+        float: right;
+        margin: 10% 20px 0 0;
+    }
+}
+/*start of tablet mode */
+@media (min-width: 1015px)and (max-width:1343px) {
+    .glyphicon-calendar{
+        pointer-events: all;
+    }
+    .glyphicon-user{
+        pointer-events: all;
+    }
+    .glyphicon-list-alt{
+        pointer-events: all;
+    }
+    .glyphicon-time{
+        pointer-events: all;
+    }
+    .glyphicon-signal{
+        pointer-events: all;
+    }
+    .glyphicon-cog{
+        pointer-events: all;
+    } .container {
+	width: 100%;
+	padding: 0;
+	}
+    header span.glyphicon.glyphicon-comment, header span.glyphicon.glyphicon-bell{
+        margin-top: 15px;
+    }
+    nav {
+		margin-top:12%;
+        margin-left: 5%;
+    }
+    nav > ul > li {
+        margin-top: 10%;
+    }
+    nav span {
+        font-size: 3.5em;
+		color:#555555;
+    }
+    nav p {
+        display: none;
+    }
+    main {
+        width: 81%;
+        float: right;
+        margin: 10% 20px 0 0;
+    }
+    footer {
+        display: none;
+    }
+}
+@media (max-width:1014px){
+    .glyphicon-calendar{
+        pointer-events: all;
+    }
+    .glyphicon-user{
+        pointer-events: all;
+    }
+    .glyphicon-list-alt{
+        pointer-events: all;
+    }
+    .glyphicon-time{
+        pointer-events: all;
+    }
+    .glyphicon-signal{
+        pointer-events: all;
+    }
+    .glyphicon-cog{
+        pointer-events: all;
+    } .container {
+          width: 100%;
+          padding: 0;
+      }
+    header span.glyphicon.glyphicon-comment, header span.glyphicon.glyphicon-bell{
+        margin-top: 15px;
+    }
+    nav {
+        margin-top:12%;
+        margin-left: 5%;
+    }
+    nav > ul > li {
+        margin-top: 20%;
+    }
+    nav span {
+        font-size: 3.5em;
+        color:#555555;
+    }
+    nav p {
+        display: none;
+    }
+    main {
+        width: 81%;
+        float: right;
+        margin: 10% 20px 0 0;
+    }
+    footer {
+        display: none;
+    }
+}
